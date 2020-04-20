@@ -139,7 +139,7 @@ Reboot the device, you'll find the app installed.
 
 Select the app and give it permissions:
 
-![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-settings.png)
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-setting.png)
 
 Pull down the notification bar and select MiLauncher. You'll be back on the main screen. How again click on the app. 
 
@@ -147,4 +147,14 @@ You have finally installed a navigation panel.
 
 ![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-side.png)
 
+### Step 5: Change the timezone
+The device is set to default timezone of China but youcan change the timezone with the following command:
+```shell
+adb shell setprop persist.sys.timezone "Continent/City"
+```
+You'll find the exact timezone list here: [Wikipedia_TZ_List](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
+For example, I set my timezone with
+```shell
+adb shell setprop persist.sys.timezone "Europe/Amsterdam"
+```
