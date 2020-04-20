@@ -88,7 +88,7 @@ Note that the home screen and main settings screen is not in English. Keep readi
 ![eng](https://github.com/epodegrid/epd106-ADB/blob/master/images/locale/settings-english.png)
 
 ### Step 4: The launcher
-The reason you can't change the homescreen is because the lancher itself is in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
+The reason you can't change the launguage in homescreen is because the lancher itself is in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
 * RelauncheX [Available here](https://f-droid.org/en/packages/com.gacode.relaunchx/)
 * MiReader Launcher [Available here](https://gofile.io/?c=a29ycq)
 * Simple E-Ink Launcher [Available here](https://bitbucket.org/dsimbiriatin/simple-ink-launcher/downloads/org.ds.simple.ink.launcher-1.2-release.apk)
@@ -110,11 +110,41 @@ adb shell am start -W -c android.intent.category.HOME -a android.intent.action.M
 ```
 
 This will give youa choice to change the launcher. Choose MiLauncher, select always.
+
 ![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/home-2.png)
 
 The homescreen changes to this:
+
 ![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/milauncher.png)
 
 If you now choose settings from the launcher, it's in English! 
 
 With the file manager, you can also install any third party apps using its APK file. Download the apk, transfer it to the device, open file manager, select and install!  
+
+The original e-reader app in still there, it now appears as an app on the launcher.
+
+### Step 4: Naviation button
+In this final section, I'll mention the steps to change the timezone and add naidation buttons.
+
+In order to install the navigation buttons, download the file mentioned here : [Xiaomi One Touch Button](https://gofile.io/?c=6ZL3Zk)
+You can follow the above steps to install using ADB. DO not use the file manager yet because it'll give a problem. 
+
+Like step 4, you can copy the file to directory or install directly using location. I'll copt it into directoryof Minimal ADB and then install it.
+```shell
+adb install XiaomiOT.apk
+```
+Reboot the device, you'll find the app installed.
+
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install.png)
+
+Select the app and give it permissions:
+
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-settings.png)
+
+Pull down the notification bar and select MiLauncher. You'll be back on the main screen. How again click on the app. 
+
+You have finally installed a navigation panel.
+
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-side.png)
+
+
