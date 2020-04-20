@@ -11,7 +11,7 @@ Disclaimer
 Requirements:
 ``` 
 * Windows PC ( It's possible to do the same in Mac or Linux but I have not mentioned the steps here. The commands will be similar.)
-* Xiaomi Suokan E-Reader
+* Xiaomi Duokan E-Reader
 * Stable internet
 * USB cables
 ```
@@ -22,8 +22,29 @@ All the commands listed below require ADB. If you don't have ADB installed, you 
 
 It's preferred to use default settings. It might be helpful to note the installation location.
 
+### Step 2: Turn on ADB on device
+Follow the given instructions carefully. If you don't understand Chinese, use the image translate feature from Google. I've marked the buttons in red, if you go through them as shown, it'll be easy. 
+
+1. Go to the settings page on the device.
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/home.png)
+
+2. Click on the device information page.
+![build](https://github.com/epodegrid/epd106-ADB/blob/master/images/build.png)
+
+3. Keep tapping on the version number about 10 times until developer options is activated.
+![version](https://github.com/epodegrid/epd106-ADB/blob/master/images/version.png)
+
+4. Go back to settings and navigate to device options.
+![setting](https://github.com/epodegrid/epd106-ADB/blob/master/images/setting.png)
+
+5. If developer options are activated, you'll find a fourth menu there as shown. Select that menu.
+![debug](https://github.com/epodegrid/epd106-ADB/blob/master/images/debug.png)
+
+6. Scroll down and go to USB debugging. Keep the option ticked.
+![adb](https://github.com/epodegrid/epd106-ADB/blob/master/images/adb.png)
+
 ### Step 2: Open ADB shell
-Navigate to the installation location. Usually this directory would be `C:\Program Files (x86)\Minimal ADB and Fastboot`.
+Move back to  your PC. Navigate to the installation location. Usually this directory would be `C:\Program Files (x86)\Minimal ADB and Fastboot`.
 Click on `cmd-here`. Once the command prompt opens, use the below command to check if the device is listed:
 ```shell
 adb devices
