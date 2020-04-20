@@ -52,6 +52,8 @@ adb devices
 
 If the MiReader is connected to the computer and all above steps are followed correctly, the serial number of the device will be shown. I would advice not connecting any other android device to the computer during the whole process. 
 
+DO NOT CLOSE THE ADB SHELL/COMMAND PROMPT.
+
 ### Step 4: Change the language.
 Skip this step if you don't want to change the language.
 It won't change 100% of the interface to English but a major section of the Xiaomi MiReader could be in changed to English.
@@ -77,6 +79,42 @@ On your device, the following screen will be shown:
 5.Once you move the selected language up, the system begins to change the language, give it few seconds.
 ![setting-2](https://github.com/epodegrid/epd106-ADB/blob/master/images/locale/locale-setting-2.png)
 
-Note that the home screen and main settings screen is not in English. The quick tiles and internal settings menu should have changed.
+DO NOT CLOSE THE ADB SHELL/COMMAND PROMPT.
+
+Now reboot the device by holding the power button. Voila! You have changed the Xiaomi MiReader to English!
+
+Note that the home screen and main settings screen is not in English. Keep reading for more on that. The quick tiles and internal settings menu should have changed. Something like this!
 
 ![eng](https://github.com/epodegrid/epd106-ADB/blob/master/images/locale/settings-english.png)
+
+### Step 4: The launcher
+The reason you can't change the homescreen is because the lancher itself is in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
+* RelauncheX [Available here](https://f-droid.org/en/packages/com.gacode.relaunchx/)
+* MiReader Launcher [Available here](https://gofile.io/?c=a29ycq)
+* Simple E-Ink Launcher [Available here](https://bitbucket.org/dsimbiriatin/simple-ink-launcher/downloads/org.ds.simple.ink.launcher-1.2-release.apk)
+
+For the time being, I'll use the MiReader Launcher. Download it from the above link and copy it to the directory where Minimal ADB is inatalled
+Install the app though adb.
+```shell
+adb install MiLauncher.apk
+```
+
+If you don't want to copy it to the directory, in the ADB shell / command prompt opened in step 3, type the following (change the username and directory based on your download location):
+```shell
+adb install ‪C:\Users\YourUsername\Downloads\MiLauncher.apk
+```
+The shell will return success.
+Now type:
+```shell
+adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN
+```
+
+This will give youa choice to change the launcher. Choose MiLauncher, select always.
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/home-2.png)
+
+The homescreen changes to this:
+![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/milauncher.png)
+
+If you now choose settings from the launcher, it's in English! 
+
+With the file manager, you can also install any third party apps using its APK file. Download the apk, transfer it to the device, open file manager, select and install!  
