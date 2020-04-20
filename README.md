@@ -1,5 +1,10 @@
 # Xiaomi DuoKan E-reader ADB commands list.
 
+This document contents instructions to:
+1. Change language of Xiaomi MiReader to English
+2. Install third-party / sideload apps
+3. Add a navigation panel and change the timezone
+
 Disclaimer
 ```
 * Your warranty is now void (maybe, ADB doesn't always void warranty. Check with your manufacturer).
@@ -83,13 +88,13 @@ DO NOT CLOSE THE ADB SHELL/COMMAND PROMPT.
 
 Now reboot the device by holding the power button. Voila! You have changed the Xiaomi MiReader to English!
 
-Note that the home screen and main settings screen is not in English. Keep reading for more on that. The quick tiles and internal settings menu should have changed. Something like this!
+Note that the home screen and main settings screen is not in English. Continue reading this guide for more on that. The quick tiles and internal settings menu should have changed. Something like this!
 
 ![eng](https://github.com/epodegrid/epd106-ADB/blob/master/images/locale/settings-english.png)
 
 ### Step 4: The launcher
-The reason you can't change the launguage in homescreen is because the lancher itself is in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
-* RelauncheX [Available here](https://f-droid.org/en/packages/com.gacode.relaunchx/)
+The reason you can't change the language in homescreen is because the launcher itself is not in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
+* RelaunchX [Available here](https://f-droid.org/en/packages/com.gacode.relaunchx/)
 * MiReader Launcher [Available here](https://gofile.io/?c=a29ycq)
 * Simple E-Ink Launcher [Available here](https://bitbucket.org/dsimbiriatin/simple-ink-launcher/downloads/org.ds.simple.ink.launcher-1.2-release.apk)
 
@@ -109,7 +114,7 @@ Now type:
 adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN
 ```
 
-This will give youa choice to change the launcher. Choose MiLauncher, select always.
+This will give you a choice to change the launcher. Choose MiLauncher, select always.
 
 ![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/home-2.png)
 
@@ -124,12 +129,12 @@ With the file manager, you can also install any third party apps using its APK f
 The original e-reader app in still there, it now appears as an app on the launcher.
 
 ### Step 4: Naviation button
-In this final section, I'll mention the steps to change the timezone and add naidation buttons.
+In this final section, I'll mention the steps to change the timezone and add navigation buttons.
 
 In order to install the navigation buttons, download the file mentioned here : [Xiaomi One Touch Button](https://gofile.io/?c=6ZL3Zk)
 You can follow the above steps to install using ADB. DO not use the file manager yet because it'll give a problem. 
 
-Like step 4, you can copy the file to directory or install directly using location. I'll copt it into directoryof Minimal ADB and then install it.
+Like step 4, you can copy the file to directory or install directly using location. I'll copy it into directory of Minimal ADB and then install it.
 ```shell
 adb install XiaomiOT.apk
 ```
@@ -141,14 +146,14 @@ Select the app and give it permissions:
 
 ![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-setting.png)
 
-Pull down the notification bar and select MiLauncher. You'll be back on the main screen. How again click on the app. 
+Pull down the notification bar and select MiLauncher. You'll be back on the main screen. Now again click on the app. 
 
 You have finally installed a navigation panel.
 
 ![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-side.png)
 
 ### Step 5: Change the timezone
-The device is set to default timezone of China but youcan change the timezone with the following command:
+The device is set to default timezone of China but you can change the timezone with the following command:
 ```shell
 adb shell setprop persist.sys.timezone "Continent/City"
 ```
@@ -158,3 +163,14 @@ For example, I set my timezone with
 ```shell
 adb shell setprop persist.sys.timezone "Europe/Amsterdam"
 ```
+### Bonus
+
+Now you're all set to install apps via file manager. Just select any apk you transferred from PC. First time, it'll ask for permission, grant ok, and also grant permission to install unknown apps, open the navigation button, press back and select install. The app will be installed.
+
+## End notes
+
+Though I built this document from ground-up, a lot of people need to be thanked for their work which made this possible.
+* @Kagami-src for the MiReader launcher. This app lays the foundation of a better system on the MiReader.
+* boxqkrtm for the original work on the topic. You can find his work (in Korean) here : [Naver](https://m.cafe.naver.com/ca-fe/web/cafes/xst/articles/403952?useCafeId=false)
+* shimp208 for Minimal ADB and Fastboot, the lifeline behind the entire procedure. [XDA Topic](https://forum.xda-developers.com/showthread.php?t=2317790)
+* The developers of the Xiaomi Navigation Button / Xuanfuqui. I'm sorry but I don't speak Chinese or Korean so I've no idea who built the app but if you're the developer behind this, please let me know and I'll cite you.
