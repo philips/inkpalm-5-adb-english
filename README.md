@@ -95,7 +95,7 @@ Note that the home screen and main settings screen is not in English. Continue r
 ### Step 4: The launcher
 The reason you can't change the language in homescreen is because the launcher itself is not in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
 * RelaunchX [Available here](https://f-droid.org/en/packages/com.gacode.relaunchx/)
-* MiReader Launcher [Available here](https://mega.nz/file/nYoHxIwT)
+* MiReader Launcher [Available here](https://mega.nz/file/nYoHxIwT#_6hTcBtUWST0_0VNWn8XvEL1JK377aAdsB9yIUocig8)
 * Simple E-Ink Launcher [Available here](https://bitbucket.org/dsimbiriatin/simple-ink-launcher/downloads/org.ds.simple.ink.launcher-1.2-release.apk)
 
 For the time being, I'll use the MiReader Launcher. Download it from the above link and copy it to the directory where Minimal ADB is inatalled
@@ -131,7 +131,7 @@ The original e-reader app in still there, it now appears as an app on the launch
 ### Step 4: Naviation button
 In this final section, I'll mention the steps to change the timezone and add navigation buttons.
 
-In order to install the navigation buttons, download the file mentioned here : [Xiaomi One Touch Button](https://mega.nz/file/zV5liQQZ)
+In order to install the navigation buttons, download the file mentioned here : [Xiaomi One Touch Button](https://mega.nz/file/zV5liQQZ#jAYeARU4YnnQmGo6AsLmRDf9x3T4DpmOIL5vJT_1MSg)
 You can follow the above steps to install using ADB. DO not use the file manager yet because it'll give a problem. 
 
 Like step 4, you can copy the file to directory or install directly using location. I'll copy it into directory of Minimal ADB and then install it.
