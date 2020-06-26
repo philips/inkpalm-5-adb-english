@@ -22,7 +22,7 @@ Requirements:
 ```
 The following commands have been tested on the Xiaomi DuoKan E-Reader.
 
-**_UPDATE 27/5/2020: [@drago06]( https://github.com/drago06 ) has come up with an amazing script to install Lawnchair Launchair,  Aptiode app store, some other basic apps and any language on the system. You can download it here : [MEGA Download]( https://mega.nz/file/NNl3AKLb#NSNVkmM3sitPICBBwi2UuV2g1vygS1Ftr22W2D9jTZQ ). Run the "MiReader_to_tablet 2" after extracting the zip file. You could install the below mentioned applications manually, after using the script._**
+**_UPDATE 27/5/2020: [@drago06]( https://github.com/drago06 ) has come up with an amazing script to install Lawnchair Launcher,  Aptiode app store, some other basic apps and any language on the system. You can download it here : [MEGA Download]( https://mega.nz/file/NNl3AKLb#NSNVkmM3sitPICBBwi2UuV2g1vygS1Ftr22W2D9jTZQ ). Run the "MiReader_to_tablet 2" after extracting the zip file. You could install the below mentioned applications manually, after using the script._**
 
 ### Step 1: Install ADB
 All the commands listed below require ADB. If you don't have ADB installed, you can install it from here: [Minimal ADB and Fastboot](https://forum.xda-developers.com/showthread.php?t=2317790).
