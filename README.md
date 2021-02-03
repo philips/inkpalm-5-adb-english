@@ -100,7 +100,7 @@ The reason you can't change the language in homescreen is because the launcher i
 * MiReader Launcher [Available here](https://mega.nz/file/nYoHxIwT#_6hTcBtUWST0_0VNWn8XvEL1JK377aAdsB9yIUocig8)
 * Simple E-Ink Launcher [Available here](https://bitbucket.org/dsimbiriatin/simple-ink-launcher/downloads/org.ds.simple.ink.launcher-1.2-release.apk)
 
-For the time being, I'll use the MiReader Launcher. Download it from the above link and copy it to the directory where Minimal ADB is inatalled
+For the time being, I'll use the MiReader Launcher. Download it from the above link and copy it to the directory where Minimal ADB is installed.
 Install the app though adb.
 ```shell
 adb install MiLauncher.apk
