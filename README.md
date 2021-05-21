@@ -1,9 +1,13 @@
 # Xiaomi Inkpalm 5 E-reader ADB commands list.
 
 This document contents instructions to:
-1. Change language of Xiaomi MiReader to English
+1. Change language of Xiaomi Inkpalm 5 to English
 2. Install third-party / sideload apps
-3. Add a navigation panel and change the timezone
+3. Fix home button
+4. Change the timezone
+5. Disable unneeded apps
+
+
 
 Disclaimer
 ```
@@ -16,11 +20,14 @@ Disclaimer
 Requirements:
 ``` 
 * Windows PC ( It's possible to do the same in Mac or Linux but I have not mentioned the steps here. The commands will be similar.)
-* Xiaomi Duokan E-Reader
+* Xiaomi Inkpalm 5 E-Reader
 * Stable internet
 * USB cables
 ```
 The following commands have been tested on the Xiaomi DuoKan E-Reader.
+
+More info:
+* [Mobile Read Forum on Inkpalm 5](https://www.mobileread.com/forums/showthread.php?t=338605)
 
 ### Step 1: Install ADB
 
