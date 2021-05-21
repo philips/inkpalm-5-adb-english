@@ -22,12 +22,8 @@ Requirements:
 ```
 The following commands have been tested on the Xiaomi DuoKan E-Reader.
 
-**_UPDATE 27/5/2020: [@drago06]( https://github.com/drago06 ) has come up with an amazing script to install Lawnchair Launcher,  Aptiode app store, some other basic apps and any language on the system. You can download it here : [MEGA Download]( https://mega.nz/file/NNl3AKLb#NSNVkmM3sitPICBBwi2UuV2g1vygS1Ftr22W2D9jTZQ ). Run the "MiReader_to_tablet 2" after extracting the zip file. You could install the below mentioned applications manually, after using the script._**
-
 ### Step 1: Install ADB
-All the commands listed below require ADB. If you don't have ADB installed, you can install it from here: [Minimal ADB and Fastboot](https://forum.xda-developers.com/showthread.php?t=2317790).
 
-It's preferred to use default settings. It might be helpful to note the installation location.
 
 ### Step 2: Turn on ADB on device
 Follow the given instructions carefully. If you don't understand Chinese, use the image translate feature from Google. I've marked the buttons in red, if you go through them as shown, it'll be easy. 
@@ -95,64 +91,21 @@ Note that the home screen and main settings screen is not in English. Continue r
 ![eng](https://github.com/epodegrid/epd106-ADB/blob/master/images/locale/settings-english.png)
 
 ### Step 4: The launcher
-The reason you can't change the language in homescreen is because the launcher itself is not in English. In this step, we'll change the launcher. There are 3 great launchers that you can try:
-* RelaunchX [Available here](https://f-droid.org/en/packages/com.gacode.relaunchx/)
-* MiReader Launcher [Available here](https://mega.nz/file/nYoHxIwT#_6hTcBtUWST0_0VNWn8XvEL1JK377aAdsB9yIUocig8)
-* Simple E-Ink Launcher [Available here](https://bitbucket.org/dsimbiriatin/simple-ink-launcher/downloads/org.ds.simple.ink.launcher-1.2-release.apk)
+The reason you can't change the language in homescreen is because the launcher itself is not in English. In this step, we'll change the launcher. 
 
-For the time being, I'll use the MiReader Launcher. Download it from the above link and copy it to the directory where Minimal ADB is installed.
-Install the app though adb.
-```shell
-adb install MiLauncher.apk
+Download app-home-release.apk
+ from https://github.com/Modificator/E-Ink-Launcher/releases
+
+
 ```
-
-If you don't want to copy it to the directory, in the ADB shell / command prompt opened in step 3, type the following (change the username and directory based on your download location):
-```shell
-adb install ‪C:\Users\YourUsername\Downloads\MiLauncher.apk
+adb install app-home-release.apk
 ```
-The shell will return success.
-Now type:
-```shell
-adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN
-```
-
-This will give you a choice to change the launcher. Choose MiLauncher, select always.
-
-![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/home-2.png)
-
-The homescreen changes to this:
-
-![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/milauncher.png)
-
-If you now choose settings from the launcher, it's in English! 
-
-With the file manager, you can also install any third party apps using its APK file. Download the apk, transfer it to the device, open file manager, select and install!  
 
 The original e-reader app in still there, it now appears as an app on the launcher.
 
 ### Step 4: Naviation button
-In this final section, I'll mention the steps to change the timezone and add navigation buttons.
 
-In order to install the navigation buttons, download the file mentioned here : [Xiaomi One Touch Button](https://mega.nz/file/zV5liQQZ#jAYeARU4YnnQmGo6AsLmRDf9x3T4DpmOIL5vJT_1MSg)
-You can follow the above steps to install using ADB. Do NOT use the file manager yet because it'll give a problem. 
-
-Like step 4, you can copy the file to directory or install directly using location. I'll copy it into directory of Minimal ADB and then install it.
-```shell
-adb install XiaomiOT.apk
-```
-Reboot the device, you'll find the app installed.
-
-![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install.png)
-
-Select the app and give it permissions:
-
-![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-setting.png)
-
-Pull down the notification bar and select MiLauncher. You'll be back on the main screen. Now again click on the app. 
-
-You have finally installed a navigation panel.
-
-![home](https://github.com/epodegrid/epd106-ADB/blob/master/images/install-side.png)
+The Navigation button setting needs to be updated to make a Long Press return to home. It will do a "Back" action by default.
 
 ### Step 5: Change the timezone
 The device is set to default timezone of China but you can change the timezone with the following command:
@@ -165,6 +118,16 @@ For example, I set my timezone with
 ```shell
 adb shell setprop persist.sys.timezone "Europe/Amsterdam"
 ```
+
+### Step 6: Disable unneeded apps
+
+```
+adb shell pm disable-user --user 0 com.duokan.einkreader                                                             
+adb shell pm disable-user --user 0 com.moan.appstore
+adb shell pm disable-user --user 0 com.zhangyue.read.iReader.eink                                                    
+adb shell pm disable-user --user 0 cn.wps.moffice_eng.lite  
+```
+
 ### Bonus
 
 Now you're all set to install apps via file manager. Just select any apk you transferred from PC. First time, it'll ask for permission, grant ok, and also grant permission to install unknown apps, open the navigation button, press back and select install. The app will be installed.
