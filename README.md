@@ -1,4 +1,4 @@
-# Xiaomi DuoKan E-reader ADB commands list.
+# Xiaomi Inkpalm 5 E-reader ADB commands list.
 
 This document contents instructions to:
 1. Change language of Xiaomi MiReader to English
