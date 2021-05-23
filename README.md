@@ -6,7 +6,7 @@ This document contents instructions to:
 3. [Change the Navigation Button](#change-the-navigation-button)
 4. [Change the timezone](#change-the-timezone)
 5. [Disable unneeded apps](#disable-unneeded-apps)
-6. [Install Useful Apps like Kindle, Pocket, F-Droid](#useful-apps)
+6. [Install Useful Apps like Kindle, Pocket, F-Droid](#install-useful-apps)
 
 
 
