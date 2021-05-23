@@ -1,12 +1,12 @@
 # Xiaomi Inkpalm 5 E-reader ADB commands list.
 
 This document contents instructions to:
-1. Change language of Xiaomi Inkpalm 5 to English
-2. Install third-party / sideload apps
-3. Fix home button
-4. Change the timezone
-5. Disable unneeded apps
-6. Login to Amazon Kindle, install Pocket, etc
+1. [Change language of Xiaomi Inkpalm 5 to English](#change-language-to-english)
+2. [Install an English Launcher](#install-an-english-launcher)
+3. [Change the Navigation Button](#change-the-navigation-button)
+4. [Change the timezone](#change-the-timezone)
+5. [Disable unneeded apps](#disable-unneeded-apps)
+6. [Install Useful Apps like Kindle, Pocket, F-Droid](#useful-apps)
 
 
 
@@ -30,10 +30,13 @@ The following commands have been tested on the Xiaomi DuoKan E-Reader.
 More info:
 * [Mobile Read Forum on Inkpalm 5](https://www.mobileread.com/forums/showthread.php?t=338605)
 
-### Step 1: Install ADB
+## Change Language to English
 
+### Install ADB
 
-### Step 2: Turn on ADB on device
+[Download and install ADB for macOS/Linux/Windows from Android.com](https://developer.android.com/studio/releases/platform-tools) 
+
+### Turn on ADB on device
 Follow the given instructions carefully. If you don't understand Chinese, use the image translate feature from Google. I've marked the buttons in red, if you go through them as shown, it'll be easy. 
 
 1. Go to the settings page on the device.
@@ -54,7 +57,7 @@ Follow the given instructions carefully. If you don't understand Chinese, use th
 6. Scroll down and go to USB debugging. Keep the option ticked.
 ![adb](https://github.com/epodegrid/epd106-ADB/blob/master/images/adb.png)
 
-### Step 3: Open ADB shell
+### Open ADB shell
 Move back to  your PC. Navigate to the installation location. Usually this directory would be `C:\Program Files (x86)\Minimal ADB and Fastboot`.
 Click on `cmd-here`. Once the command prompt opens, use the below command to check if the device is listed:
 ```shell
@@ -65,7 +68,7 @@ If the MiReader is connected to the computer and all above steps are followed co
 
 DO NOT CLOSE THE ADB SHELL/COMMAND PROMPT.
 
-### Step 4: Change the language.
+### Change the language
 Skip this step if you don't want to change the language.
 It won't change 100% of the interface to English but a major section of the Xiaomi MiReader could be in changed to English.
 
@@ -98,24 +101,23 @@ Note that the home screen and main settings screen is not in English. Continue r
 
 ![eng](https://github.com/epodegrid/epd106-ADB/blob/master/images/locale/settings-english.png)
 
-### Step 4: The launcher
-The reason you can't change the language in homescreen is because the launcher itself is not in English. In this step, we'll change the launcher. 
+### Install an English Launcher
 
-Download app-home-release.apk
- from https://github.com/Modificator/E-Ink-Launcher/releases
+The pre-installed launcher is not in English. In this step, we'll change the launcher. 
 
+- Download app-home-release.apk from https://github.com/Modificator/E-Ink-Launcher/releases
 
 ```
 adb install app-home-release.apk
 ```
 
-The original e-reader app in still there, it now appears as an app on the launcher.
+The original e-reader app in still there, it now appears as the "Moan" app on the launcher.
 
-### Step 4: Naviation button
+## Change the Navigation button
 
 The Navigation button setting needs to be updated to make a Long Press return to home. It will do a "Back" action by default.
 
-### Step 5: Change the timezone
+## Change the Timezone
 
 The device is set to default timezone of China but you can change the timezone with the following command:
 ```shell
@@ -128,7 +130,7 @@ For example, I set my timezone with
 adb shell setprop persist.sys.timezone "Europe/Amsterdam"
 ```
 
-### Step 6: Disable unneeded apps
+## Disable Unneeded apps
 
 ```
 adb shell pm disable-user --user 0 com.duokan.einkreader                                                             
@@ -137,7 +139,7 @@ adb shell pm disable-user --user 0 com.zhangyue.read.iReader.eink
 adb shell pm disable-user --user 0 cn.wps.moffice_eng.lite  
 ```
 
-### Step 7: Login to Kindle, Install Pocket, and other apps
+## Install Useful Apps
 
 **Kindle** - a book reader and store from Amazon
 
@@ -155,14 +157,6 @@ adb shell pm disable-user --user 0 cn.wps.moffice_eng.lite
 - [Download and install the F-Droid classic client](https://f-droid.org/en/packages/eu.bubu1.fdroidclassic/)
 - Launch f-droid
 
-### Bonus
+## Credits
 
-Now you're all set to install apps via file manager. Just select any apk you transferred from PC. First time, it'll ask for permission, grant ok, and also grant permission to install unknown apps, open the navigation button, press back and select install. The app will be installed.
-
-## End notes
-
-Though I built this document from ground-up, a lot of people need to be thanked for their work which made this possible.
-* @Kagami-src for the MiReader launcher. This app lays the foundation of a better system on the MiReader.
-* boxqkrtm for the original work on the topic. You can find his work (in Korean) here : [Naver](https://m.cafe.naver.com/ca-fe/web/cafes/xst/articles/403952?useCafeId=false)
-* shimp208 for Minimal ADB and Fastboot, the lifeline behind the entire procedure. [XDA Topic](https://forum.xda-developers.com/showthread.php?t=2317790)
-* The developers of the Xiaomi Navigation Button / Xuanfuqui. I'm sorry but I don't speak Chinese or Korean so I've no idea who built the app but if you're the developer behind this, please let me know and I'll cite you.
+This is a fork of the instructions from https://github.com/epodegrid/epd106-ADB
