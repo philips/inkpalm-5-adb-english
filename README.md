@@ -9,25 +9,7 @@ This document contents instructions to:
 6. [Install Useful Apps like Kindle, Pocket, F-Droid](#install-useful-apps)
 
 
-
-Disclaimer
-```
-* Your warranty is now void (maybe, ADB doesn't always void warranty. Check with your manufacturer).
-* I'm not responsible for bricked devices, thermonuclear war, or you failing the test because the ebook won't open. Please
-  do some research if you have any concerns about this guide before trying it! 
-* YOU are choosing to make these modifications, and any problems are your reponsibility.
-```
-
-Requirements:
-``` 
-* Windows PC ( It's possible to do the same in Mac or Linux but I have not mentioned the steps here. The commands will be similar.)
-* Xiaomi Inkpalm 5 E-Reader
-* Stable internet
-* USB cables
-```
-The following commands have been tested on the Xiaomi DuoKan E-Reader.
-
-More info:
+**More info and Resources**
 * [Mobile Read Forum on Inkpalm 5](https://www.mobileread.com/forums/showthread.php?t=338605)
 
 ## Change Language to English
