@@ -6,6 +6,7 @@ This document contents instructions to:
 3. Fix home button
 4. Change the timezone
 5. Disable unneeded apps
+6. Login to Amazon Kindle, install Pocket, etc
 
 
 
@@ -115,6 +116,7 @@ The original e-reader app in still there, it now appears as an app on the launch
 The Navigation button setting needs to be updated to make a Long Press return to home. It will do a "Back" action by default.
 
 ### Step 5: Change the timezone
+
 The device is set to default timezone of China but you can change the timezone with the following command:
 ```shell
 adb shell setprop persist.sys.timezone "Continent/City"
@@ -134,6 +136,24 @@ adb shell pm disable-user --user 0 com.moan.appstore
 adb shell pm disable-user --user 0 com.zhangyue.read.iReader.eink                                                    
 adb shell pm disable-user --user 0 cn.wps.moffice_eng.lite  
 ```
+
+### Step 7: Login to Kindle, Install Pocket, and other apps
+
+**Kindle** - a book reader and store from Amazon
+
+- [Download and install Amazon App Store APK](https://www.amazon.com/gp/mas/get/android/ref=get_appstore?ie=UTF8&%2AVersion%2A=1&%2Aentries%2A=0)
+- Login to your Amazon account in the Amazon App store
+- Launch the pre-installed Kindle App
+
+**Pocket** - a tool to cache web articles to read later
+
+- [Download and install the Pocket app](https://help.getpocket.com/article/1161-installing-pocket-for-android-via-direct-download)
+- Login to your Pocket account
+
+**F-Droid** - an app store for free open source android software
+
+- [Download and install the F-Droid classic client](https://f-droid.org/en/packages/eu.bubu1.fdroidclassic/)
+- Launch f-droid
 
 ### Bonus
 
