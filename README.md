@@ -97,7 +97,7 @@ The original e-reader app in still there, it now appears as the "Moan" app on th
 
 ## Change the Navigation button
 
-The Navigation button setting needs to be updated to make a Long Press return to home. It will do a "Back" action by default.
+The logo button defaults to 'back' for short press, and 'refresh' for long press. The button functions can be changed in the settings e.g. long press can be changed to 'home'.
 
 ## Change the Timezone
 
