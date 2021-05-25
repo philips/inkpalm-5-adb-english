@@ -87,7 +87,7 @@ Note that the home screen and main settings screen is not in English. Continue r
 
 The pre-installed launcher is not in English. In this step, we'll change the launcher. 
 
-- Download app-home-release.apk from https://github.com/Modificator/E-Ink-Launcher/releases
+- Download app-home-release.apk from https://github.com/qwerty12/E-Ink-Launcher/releases/latest
 
 ```
 adb install app-home-release.apk
