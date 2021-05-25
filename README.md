@@ -99,6 +99,11 @@ The original e-reader app in still there, it now appears as the "Moan" app on th
 
 The logo button defaults to 'back' for short press, and 'refresh' for long press. The button functions can be changed in the settings e.g. long press can be changed to 'home'.
 
+
+![logo-1](images/logo-1.png)
+![logo-2](images/logo-2.png)
+![logo-3](images/logo-3.png)
+
 ## Change the Timezone
 
 The device is set to default timezone of China but you can change the timezone with the following command:
