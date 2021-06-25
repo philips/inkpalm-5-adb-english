@@ -11,6 +11,7 @@ This document contents instructions to:
 
 **More info and Resources**
 * [Mobile Read Forum on Inkpalm 5](https://www.mobileread.com/forums/showthread.php?t=338605)
+* [Getting root on the device](https://github.com/qwerty12/inkPalm-5-EPD105-root)
 
 ## Change Language to English
 
