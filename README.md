@@ -90,10 +90,10 @@ Note that the home screen and main settings screen is not in English. Continue r
 
 The pre-installed launcher is not in English. In this step, we'll change the launcher. 
 
-- Download app-home-release.apk from https://github.com/qwerty12/E-Ink-Launcher/releases/latest
+- Download `com.jkuester.unlauncher.apk` from https://github.com/jkuester/unlauncher/releases/latest
 
 ```
-adb install app-home-release.apk
+adb install com.jkuester.unlauncher.apk
 ```
 
 The original e-reader app in still there, it now appears as the "Moan" app on the launcher.
@@ -101,7 +101,6 @@ The original e-reader app in still there, it now appears as the "Moan" app on th
 ## Change the Navigation button
 
 The logo button defaults to 'back' for short press, and 'refresh' for long press. The button functions can be changed in the settings e.g. long press can be changed to 'home'.
-
 
 ![logo-1](images/logo-1.png)
 ![logo-2](images/logo-2.png)
