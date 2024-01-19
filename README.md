@@ -136,15 +136,25 @@ adb shell pm disable-user --user 0 cn.wps.moffice_eng.lite
 - Login to your Amazon account in the Amazon App store
 - Launch the pre-installed Kindle App
 
-**Pocket** - a tool to cache web articles to read later
-
-- [Download and install the Pocket app](https://help.getpocket.com/article/1161-installing-pocket-for-android-via-direct-download)
-- Login to your Pocket account
-
 **F-Droid** - an app store for free open source android software
 
 - [Download and install the F-Droid classic client](https://f-droid.org/en/packages/eu.bubu1.fdroidclassic/)
 - Launch f-droid
+
+**Aurora Store** - install Google Play applications
+
+- [Download and install the Aurora Store](https://f-droid.org/packages/com.aurora.store/)
+- Launch Aurora Store
+
+## Pro Tips
+
+**Avoiding Slow Keyboard Entry**
+
+Entering text on the eink screen is a pain. Use this instead if you are connected via USB to a laptop:
+
+```
+adb shell input text TEXTTOENTER
+```
 
 ## Credits
 
