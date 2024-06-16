@@ -1,7 +1,6 @@
-# Xiaomi Inkpalm 5 E-reader ADB commands list.
+# Xiaomi Inkpalm 5 English Configuration
 
-
-It has been mentioned that in 2023 many Inkpalm devices started shipping with English enabled by default. See this [discussion for more information](https://github.com/philips/inkpalm-5-adb-english/issues/6). If your device didn't ship with this new firmware you can follow the old instructions to [change language of Xiaomi Inkpalm 5 to English via ADB](english-adb.md).
+In 2023 many Inkpalm 5 devices started shipping with English enabled by default. See this [discussion for more information](https://github.com/philips/inkpalm-5-adb-english/issues/6). If your device didn't ship with this new firmware you can follow the old instructions to [change language of Xiaomi Inkpalm 5 to English via ADB](english-adb.md).
 
 Once you have the Inkpalm 5 in the English mode you can take some additional steps to improve the device.
 
